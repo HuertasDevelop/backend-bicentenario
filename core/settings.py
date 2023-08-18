@@ -199,7 +199,20 @@ CORS_ALLOWED_ORIGINS = getenv(
     'CORS_ALLOWED_ORIGINS',
     'http://localhost:3000,http://127.0.0.1:3000,http://localhost:8000,http://127.0.0.1:8000'
 ).split(',')
+CSRF_TRUSTED_ORIGINS = getenv(
+    'CORS_ALLOWED_ORIGINS',
+    'http://localhost:3000,http://127.0.0.1:3000,http://localhost:8000,http://127.0.0.1:8000'
+).split(',')
+CORS_ORIGIN_WHITELIST = getenv(
+    'CORS_ALLOWED_ORIGINS',
+    'http://localhost:3000,http://127.0.0.1:3000,http://localhost:8000,http://127.0.0.1:8000'
+).split(',')
+
+
+print(CORS_ALLOWED_ORIGINS)
 CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_ALLOW_ALL = True
+
 AUTH_USER_MODEL = 'users.UserAccount'
 
 LANGUAGE_CODE = 'es-pe'

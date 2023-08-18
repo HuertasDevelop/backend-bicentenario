@@ -7,7 +7,7 @@ from .models import ContactEnterprice
 class ContactListView(generics.ListAPIView):
     permission_classes = (permissions.AllowAny, )
     serializer_class = ContactSerializer
-    queryset = ContactEnterprice.objects.first()
+    queryset = ContactEnterprice.objects.all()
 
     def get(self, request, format=None):
         try:

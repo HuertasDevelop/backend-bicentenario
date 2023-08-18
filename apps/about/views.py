@@ -8,7 +8,7 @@ from .serializers import AboutSerializer, OfficeSerializer, StatsSerializer
 class AboutListView(generics.ListAPIView):
     permission_classes = (permissions.AllowAny, )
     serializer_class = AboutSerializer
-    queryset = About.objects.first()
+    queryset = About.objects.all()
 
     def get(self, request, format=None):
         try:
