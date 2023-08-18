@@ -7,10 +7,11 @@ from .views import (
     LogoutView,
     CustomProviderAuthView
 )
+app_name = 'users'
 
 urlpatterns = [
     re_path(r'^o/(?P<provider>\S+)/$',
-            CustomProviderAuthView.as_view(), name='provider-auth'),
+            CustomProviderAuthView.as_view()),
     path('jwt/create/', CustomTokenObtainPairView.as_view()),
     path('jwt/refresh/', CustomTokenRefreshView.as_view()),
     path('jwt/verify/', CustomTokenVerifyView.as_view()),

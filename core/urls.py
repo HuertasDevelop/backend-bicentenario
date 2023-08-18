@@ -11,6 +11,5 @@ urlpatterns = [
     path('api/contact/', include('apps.contact.urls')),
     path('api/about/', include('apps.about.urls')),
 
-
     path('', admin.site.urls),
 ]
