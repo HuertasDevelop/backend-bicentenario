@@ -52,8 +52,10 @@ INSTALLED_APPS = [
     'apps.users',
     'apps.projects',
     'apps.web',
-    # 'apps.plan',
-    # 'apps.account',
+    'apps.about',
+    'apps.contact',
+    'apps.lead',
+
 ]
 
 MIDDLEWARE = [

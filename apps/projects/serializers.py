@@ -18,7 +18,7 @@ class BenefitsSerializer(serializers.ModelSerializer):
 class GallerySerializer(serializers.ModelSerializer):
     class Meta:
         model = Gallery
-        fields = ('id', 'name', 'alt', )
+        fields = ('id', 'photo', 'alt', )
 
 
 class ProjectSerializer(serializers.ModelSerializer):
@@ -36,6 +36,8 @@ class ProjectSerializer(serializers.ModelSerializer):
             'place',
             'from_area',
             'type_coin',
+            'from_price',
+            'price',
             'people_card',
             'banner_card',
             'slogan',
@@ -51,4 +53,5 @@ class ProjectSerializer(serializers.ModelSerializer):
             'photo_feature',
             'benefits',
             'gallery',
+            'logo',
         )

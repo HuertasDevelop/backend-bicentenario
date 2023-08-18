@@ -78,3 +78,23 @@ class ProjectPage(models.Model):
 
     def __str__(self):
         return self.link
+
+
+class AboutPage(models.Model):
+    class Type(models.TextChoices):
+        BANNER_1 = 'BANNER_1'
+        BANNER_2 = 'BANNER_2'
+    description = models.TextField(verbose_name='Descripción')
+    link = models.URLField(max_length=200, blank=True,
+                           null=True, verbose_name='Link')
+    photo = CloudinaryField(
+        'foto', overwrite=True, format="webp", blank=True, null=True)
+    type = models.CharField(
+        max_length=20, choices=Type.choices, unique=True, verbose_name='Tipo')
+
+    class Meta:
+        verbose_name = 'Pagina de Proyectos'
+        verbose_name_plural = 'Paginas de Proyectos'
+
+    def __str__(self):
+        return self.link

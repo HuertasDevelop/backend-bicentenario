@@ -39,6 +39,8 @@ class Project(models.Model):
     slug = models.SlugField(max_length=255, null=True,
                             blank=True, unique=True, verbose_name='Slug')
     description = models.TextField(verbose_name='Descripción')
+    logo = CloudinaryField(
+        'logo', overwrite=True, format="webp", blank=True, null=True)
 
     place = models.CharField(max_length=100, verbose_name='Lugar')
     from_price = models.DecimalField(
