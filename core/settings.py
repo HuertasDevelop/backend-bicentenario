@@ -26,8 +26,7 @@ DEVELOPMENT_MODE = getenv('DEVELOPMENT_MODE', 'False') == 'True'
 SECRET_KEY = getenv('DJANGO_SECRET_KEY', get_random_secret_key())
 DEBUG = getenv('DJANGO_DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = getenv('DJANGO_ALLOWED_HOSTS',
-                       '127.0.0.1,localhost').split(',')
+ALLOWED_HOSTS = ['*']
 
 
 INSTALLED_APPS = [
@@ -209,7 +208,6 @@ CORS_ORIGIN_WHITELIST = getenv(
 ).split(',')
 
 
-print(CORS_ALLOWED_ORIGINS)
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_ALLOW_ALL = True
 
